@@ -2,10 +2,11 @@ import PromptSuggestionButton from "./PromptSuggestionButton";
 
 const PromptSuggestionRow = ({ onPromptClick }) => {
   const prompts = [
-    'Como a pesquisa por similaridade funciona com um Vector DB?',
-    'O que é o DataStax Enterprise?',
-    'Como o CassIO funciona?',
-    'Quais são algumas perguntas frequentes sobre o Astra?',
+    'Oque é DevOps?',
+    'Como a DreamSquad pode me ajudar?',
+    'Qual o contato da DreamSquad?',
+    'Quais serviços a DreamSquad oferece?',
+    'Quais são os principais diferenciais da DreamSquad?',
   ];
 
   return (

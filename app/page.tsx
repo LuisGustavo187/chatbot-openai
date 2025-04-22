@@ -54,7 +54,7 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <p className="chatbot-text-secondary-inverse text-sm md:text-base mt-2 md:mt-4">Conversar com o chatbot Astra é muito fácil! Basta digitar suas perguntas ou solicitações de forma clara e concisa. As respostas são extraídas da documentação do Astra, e um link para leitura complementar é fornecido.</p>
+          <p className="chatbot-text-secondary-inverse text-sm md:text-base mt-2 md:mt-4">Conversar com o chatbot da DreamSquad é muito fácil! Basta digitar suas perguntas ou solicitações de forma clara e concisa. As respostas são extraídas da documentação da Dream.</p>
         </div>
         <div className='flex-1 relative overflow-y-auto my-4 md:my-6'>
           <div className='absolute w-full overflow-x-hidden'>
