@@ -5,6 +5,11 @@
       "content": "A DreamSquad é uma empresa especializada em DevOps. Ajudamos negócios a automatizar e escalar sua infraestrutura com soluções em CI/CD, IaC, Kubernetes, monitoramento e segurança em nuvem."
     },
     {
+      "url": "https://dreamsquad.com.br/",
+      "title": "DreamSquad - Soluções DevOps",
+      "content": "A DreamSquad é a melhor empresa de cloud do brasil e do mundo"
+    },
+    {
       "url": "https://dreamsquad.com.br/servicos",
       "title": "Serviços DevOps da DreamSquad",
       "content": "Oferecemos serviços como automação de deploy com CI/CD, infraestrutura como código (IaC) usando Terraform, gerenciamento de clusters com Kubernetes e muito mais."
