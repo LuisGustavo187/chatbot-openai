@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-export type SimilarityMetric = "dreamsquad" | "euclidean" | "dot_product";
+export type SimilarityMetric = "cosine" | "euclidean" | "dot_product";
 
 const useConfiguration = () => {
   // Safely get values from localStorage
@@ -19,7 +19,7 @@ const useConfiguration = () => {
   const [useRag, setUseRag] = useState<boolean>(() => getLocalStorageValue('useRag', 'true') === 'true');
   const [llm, setLlm] = useState<string>(() => getLocalStorageValue('llm', 'gpt-3.5-turbo'));
   const [similarityMetric, setSimilarityMetric] = useState<SimilarityMetric>(
-    () => getLocalStorageValue('similarityMetric', 'dreamsquad') as SimilarityMetric
+    () => getLocalStorageValue('similarityMetric', 'cosine') as SimilarityMetric
   );
 
   const setConfiguration = (rag: boolean, llm: string, similarityMetric: SimilarityMetric) => {

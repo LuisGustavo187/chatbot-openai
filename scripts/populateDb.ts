@@ -19,12 +19,12 @@ const splitter = new RecursiveCharacterTextSplitter({
 });
 
 const similarityMetrics: SimilarityMetric[] = [
-  'dreamsquad',
+  'cosine',
   'euclidean',
   'dot_product',
 ]
 
-const createCollection = async (similarity_metric: SimilarityMetric = 'dreamsquad') => {
+const createCollection = async (similarity_metric: SimilarityMetric = 'cosine') => {
   try {
     const res = await astraDb.createCollection(`chat_${similarity_metric}`, {
       vector: {
@@ -38,7 +38,7 @@ const createCollection = async (similarity_metric: SimilarityMetric = 'dreamsqua
   }
 };
 
-const loadSampleData = async (similarity_metric: SimilarityMetric = 'dreamsquad') => {
+const loadSampleData = async (similarity_metric: SimilarityMetric = 'cosine') => {
   const collection = await astraDb.collection(`chat_${similarity_metric}`);
   for await (const { url, title, content} of sampleData) {
     const chunks = await splitter.splitText(content);

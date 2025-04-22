@@ -26,7 +26,7 @@ const Configure = ({ isOpen, onClose, useRag, llm, similarityMetric, setConfigur
   ];
 
   const similarityMetricOptions = [
-    { label: 'Dreamsquad Similarity', value: 'dreamsquad' },
+    { label: 'cosine Similarity', value: 'cosine' },
     { label: 'Euclidean Distance', value: 'euclidean' },
     { label: 'Dot Product', value: 'dot_product' }
   ];
