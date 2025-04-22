@@ -45,7 +45,7 @@ const Configure = ({ isOpen, onClose, useRag, llm, similarityMetric, setConfigur
       <div className="chatbot-section flex flex-col origin:w-[800px] w-full origin:h-[735px] h-full p-6 rounded shadow-lg overflow-auto">
         <div className="grow">
           <div className='pb-6 flex justify-between'>
-            <h1 className='chatbot-text-primary text-xl md:text-2xl font-medium'>Configure</h1>
+            <h1 className='chatbot-text-primary text-xl md:text-2xl font-medium'>Configurar</h1>
             <button
               onClick={onClose}
               className="chatbot-text-primary text-4xl font-thin leading-8"
@@ -61,11 +61,11 @@ const Configure = ({ isOpen, onClose, useRag, llm, similarityMetric, setConfigur
               value={selectedLlm}
               onSelect={setSelectedLlm}
             />
-            <Toggle enabled={rag} label="Enable vector content (RAG)" onChange={() => setRag(!rag)} />
+            <Toggle enabled={rag} label="Habilitar base de conhecimento (RAG)" onChange={() => setRag(!rag)} />
           </div>
           <Dropdown
             fieldId="similarityMetric"
-            label="Similarity Metric"
+            label="Métrica de similaridade"
             options={similarityMetricOptions}
             value={selectedSimilarityMetric}
             onSelect={setSelectedSimilarityMetric}
@@ -77,13 +77,13 @@ const Configure = ({ isOpen, onClose, useRag, llm, similarityMetric, setConfigur
               className='chatbot-button-secondary flex rounded-md items-center justify-center px-2.5 py-3'
               onClick={onClose}
             >
-              Cancel
+              Cancelar
             </button>
             <button
               className='chatbot-button-primary flex rounded-md items-center justify-center px-2.5 py-3'
               onClick={handleSave}
             >
-              Save Configuration
+              Salvar Configuração
             </button>
           </div>
           <Footer />
