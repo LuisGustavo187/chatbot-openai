@@ -1,0 +1,20 @@
+name: Rollback PROD
+permissions:
+  id-token: write
+  contents: write
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'TAG: (format: vx.x.x)'
+        required: true
+
+jobs:
+  deploy-kubernetes-prod:
+    uses: gohubly/monitfy-workflows/.github/workflows/rollback-prod.yml@main
+    with:
+      app_name: nomeappnew
+      app_namespace: nomeappnew
+      aws_region: us-east-1
+    secrets: inherit
