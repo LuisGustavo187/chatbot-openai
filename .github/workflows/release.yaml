@@ -1,0 +1,14 @@
+name: Release
+permissions:
+  id-token: write
+  contents: write
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    uses: gohubly/monitfy-workflows/.github/workflows/release.yml@main
+    secrets: inherit
