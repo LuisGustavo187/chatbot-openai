@@ -1,0 +1,18 @@
+name: Pull Request
+permissions:
+  id-token: write
+  contents: write
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - main
+      - 'staging'
+
+jobs:
+  pull-request:
+    uses: gohubly/monitfy-workflows/.github/workflows/pull-request.yml@main
+    with:
+      test_command: echo teste
+    secrets: inherit
